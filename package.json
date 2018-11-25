@@ -5,12 +5,18 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Liam Franklin",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
+    "client": "0.0.1",
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "create-react-app": "^2.1.1",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.0.2"
